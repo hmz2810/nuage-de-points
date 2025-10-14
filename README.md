@@ -1,53 +1,55 @@
 ## Théorie : Méthode des Moindres Carrés
 
-La **méthode des moindres carrés** est une technique statistique utilisée pour ajuster une fonction à un ensemble de données expérimentales. Elle permet de trouver la meilleure approximation d'une fonction (souvent une droite ou un plan) en minimisant la somme des carrés des différences entre les valeurs observées et les valeurs prédites par le modèle.
+La **méthode des moindres carrés** est une technique utilisée pour ajuster une fonction à un ensemble de données expérimentales. Elle consiste à minimiser la somme des carrés des différences entre les valeurs observées et les valeurs prédites par le modèle.
 
 ### Contexte dans ce projet
 
-Dans ce projet, l'objectif est d'ajuster une **surface plane 3D** aux points d'un nuage de données. Le modèle que nous utilisons est une **régression linéaire multivariée**, où la surface est représentée par un plan défini par l'équation :
+Dans ce projet, l'objectif est d'ajuster une **surface plane 3D** aux points d'un nuage de données. Nous utilisons un modèle de **régression linéaire multivariée**, où la surface est représentée par l'équation :
 
 \[
-Z = aX + bY + c
+z = a \cdot x + b \cdot y + c
 \]
 
-- \( X \) et \( Y \) sont les coordonnées des points dans l'espace.
-- \( Z \) est la valeur associée à chaque paire \((X, Y)\), que nous cherchons à prédire.
+- \( x \) et \( y \) sont les coordonnées des points dans l'espace.
+- \( z \) est la valeur associée à chaque paire \((x, y)\), que nous cherchons à prédire.
 - \( a \), \( b \), et \( c \) sont les coefficients du plan, que nous devons déterminer.
 
 ### Formulation du problème
 
-L'idée est de trouver les valeurs des coefficients \( a \), \( b \) et \( c \) qui minimisent l'erreur quadratique entre la surface ajustée et les données. Mathématiquement, cela revient à résoudre l'équation suivante :
+L'idée est de trouver les valeurs des coefficients \( a \), \( b \) et \( c \) qui minimisent l'erreur quadratique entre la surface ajustée et les données. Mathématiquement, cela revient à résoudre le problème suivant :
 
 \[
-\min_{a, b, c} \sum_{i=1}^{n} (z_i - (a x_i + b y_i + c))^2
+\min_{a, b, c} \sum_{i=1}^{n} \left( z_i - (a \cdot x_i + b \cdot y_i + c) \right)^2
 \]
 
-C'est-à-dire, nous cherchons à minimiser la somme des carrés des erreurs entre les valeurs observées \( z_i \) et les valeurs prédites par le modèle \( a x_i + b y_i + c \).
+Cela signifie que nous cherchons à minimiser la somme des carrés des différences entre les valeurs observées \( z_i \) et les valeurs prédites par notre modèle \( (a \cdot x_i + b \cdot y_i + c) \).
 
 ### Solution par la méthode des moindres carrés
 
-En utilisant la formule des moindres carrés, nous pouvons calculer les coefficients \( a \), \( b \), et \( c \) de la manière suivante :
-
-1. Créer une matrice \( X \) qui contient les coordonnées \( x \), \( y \) et une colonne de 1 pour le terme constant (le biais).
-2. Résoudre l'équation suivante pour obtenir les coefficients :
+Pour obtenir les valeurs optimales des coefficients \( a \), \( b \) et \( c \), nous utilisons la solution analytique de la méthode des moindres carrés. Cela consiste à résoudre l'équation suivante :
 
 \[
-\mathbf{coeff} = (X^T X)^{-1} X^T \mathbf{z}
+\mathbf{c} = (X^T X)^{-1} X^T \mathbf{z}
 \]
 
-Cette formule nous donne les valeurs optimales des coefficients \( a \), \( b \), et \( c \) qui minimisent l'erreur quadratique.
+Où :
+
+- \( X \) est la matrice des variables indépendantes, qui inclut \( x \), \( y \) et une colonne de 1 pour le terme constant (le biais).
+- \( X^T \) est la transposée de \( X \).
+- \( (X^T X)^{-1} \) est l'inverse de la matrice \( X^T X \).
+- \( \mathbf{z} \) est le vecteur des valeurs observées \( z \) (les coordonnées z des points).
 
 ### Conclusion
 
-Cette méthode est largement utilisée dans les domaines de la régression linéaire et de l'analyse des données, car elle permet de trouver une solution optimale même pour des systèmes de grande taille et des ensembles de données complexes. Dans ce projet, elle permet de trouver la meilleure surface ajustée à un nuage de points 3D, ce qui facilite l'analyse de la tendance des données.
+La méthode des moindres carrés permet de calculer les valeurs optimales des coefficients \( a \), \( b \) et \( c \), qui définissent la surface plane qui minimise l'erreur par rapport aux données observées. Cette méthode est largement utilisée dans les domaines de la régression linéaire et de l'analyse des données.
 
+---
 ## Prérequis
 Avant de démarrer, tu dois t'assurer que tu as Python installé sur ta machine. Voici ce que tu dois installer pour faire tourner ce projet sans souci :
 - Python 3.x
 - `numpy` pour les calculs mathématiques
 - `matplotlib` pour afficher le graphique en 3D
 
----
 
 ## Installation des dépendances
 
