@@ -116,12 +116,4 @@ Le fichier **`nuage_de_points.py`** est assez simple à comprendre :
 - Il effectue une régression des moindres carrés pour ajuster un plan aux points.
 - Puis, il affiche le tout dans une visualisation 3D avec Matplotlib.
 Le code est divisé en étapes simples et les commentaires sont là pour t'expliquer chaque partie. Si tu veux modifier ou améliorer le code, n'hésite pas à faire des changements et à partager tes retours !
-## Licence
 
-Ce projet est sous la licence **MIT**, ce qui signifie que tu peux utiliser, modifier et distribuer ce code comme bon te semble, tant que tu inclus la licence avec le projet.
-
----
-
-Si tu rencontres des soucis ou des bugs, ou si tu as des suggestions pour améliorer le projet, n'hésite pas à ouvrir une **issue** ou à soumettre une **pull request** !
-
-Et surtout, amuse-toi avec les nuages de points ! 😄
