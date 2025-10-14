@@ -49,7 +49,7 @@ Ici :
 
 Ces valeurs de `a`, `b`, et `c` sont les paramètres qui minimisent l'erreur entre le plan et les données.
 ---
-### Programation 
+# Programation 
 ## Prérequis
 
 Avant de démarrer, tu dois t'assurer que tu as Python installé sur ta machine. Voici ce que tu dois installer pour faire tourner ce projet sans souci :
