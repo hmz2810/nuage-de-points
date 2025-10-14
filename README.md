@@ -48,8 +48,9 @@ Ici :
 - La multiplication de ces termes nous donne les coefficients `a`, `b` et `c`.
 
 Ces valeurs de `a`, `b`, et `c` sont les paramètres qui minimisent l'erreur entre le plan et les données.
+---
 
-## Installation
+## programation
 
 ### Dépendances
 
@@ -57,9 +58,6 @@ Avant d'exécuter le code, assurez-vous d'avoir installé les bibliothèques né
 
 ```bash
 pip install numpy matplotlib
-
-
-
 ---
 ## Prérequis
 Avant de démarrer, tu dois t'assurer que tu as Python installé sur ta machine. Voici ce que tu dois installer pour faire tourner ce projet sans souci :
