@@ -81,10 +81,6 @@ Pas de prise de tête avec des environnements virtuels, tu peux simplement exéc
 
 Ensuite, pour faire tourner le code et voir les résultats, il suffit de te rendre dans le dossier où le projet est situé, puis d'exécuter ce fichier Python :
 
-```bash
-python nuage_de_points.py
-
-
 ## Comment ça marche
 
 Ce code fait trois choses principales :
