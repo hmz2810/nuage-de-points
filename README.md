@@ -77,7 +77,7 @@ Pas de prise de tête avec des environnements virtuels, tu peux simplement exéc
 
 ---
 
-### Lancer le code
+## Lancer le code
 
 Ensuite, pour faire tourner le code et voir les résultats, il suffit de te rendre dans le dossier où le projet est situé, puis d'exécuter ce fichier Python :
 
